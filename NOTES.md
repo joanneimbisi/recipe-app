@@ -28,3 +28,13 @@ Users will also be able to pick from a section and it will randomly select a rec
 * A user can search their recipes(submit)
 * A user can like a recipe (click)
 * A user can comment on a recipe
+
+
+#### API Data I'll use and how I'll use it
+
+
+#### Challenegs I expect to face
+*
+*
+
+## How I am meeting the requirements of the project
