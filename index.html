@@ -23,18 +23,19 @@
           <a href="#">Let's Bake!</a>
           <ul id="nav-mobile" class="right hide-on-med-and-down">
             <li><a href="#" id="home-link">Home</a></li>
-            <li><a href="#" id="diet">Diet</a></li>
-            <li><a href="#" id="country">Country</a></li>
+            <li><a href="#" id="recipes">Recipes</a></li>
+            <li><a href="#" id="videos">Videos</a></li>
             <li><a href="#" id="tips-tricks">Tips & Tricks</a></li>
           </ul>
         </div>
       </nav>
      
     </div class= "container">
-    <!-- Main contains all of our HTML. When clicking on links, it will be displaying in "main" div -->
-    <div id="main"></div>
+    <!-- Where we push templates. When clicking on links, it will be displaying in "main" div -->
+    <div class="container" id="main"></div>
+   
 
-      <form action = "#" method = "post" class="container">
+      <form action = "#" method = "post" class="container" id="formData">
         <div>
            <label for="recipe title"> Recipe Title</label>
            <input name="recipe title" id="recipe title" placeholder="Give your recipe a short yet descriptive name.">
@@ -46,7 +47,6 @@
         </div>
         
        <div>
-           <label for="diet"> Choose Diet: </label>
 
            <select name="diet" id="diet">
                <option value="normal" id="normal">Normal</option>
@@ -64,15 +64,20 @@
         <label for="instructions"> Instructions </label>
         <input type="text" name=" Instructions" id="instructions" placeholder="Step by step, tell us how we can make it.">
 
+        <div action="/action_page.php">
+            <input type="file" id="myFile" name="filename">
+        </div>  
 
        <p> NOTE: Photos may be used in print publications or on the website. Please submit a high resolution jpg image at 300dpi. Uploaded files are limited to a max file size of 15 mb. 
        </p>
 
-       <label class="checkbox" for="myCheckboxId"> 
-           <input class="checkbox__input" type="checkbox"id="terms-services">
-           <div class="checkbox__box"></div>
-           I agree to the above and confirm this recipe is original to me
-       </label>
+       <p>
+        <label>
+          <input type="checkbox" />
+          <span>I agree to the above and confirm this recipe is original to me</span>
+        </label>
+      </p>
+        
    
       <div>
        <button type="submit"> Submit </button>
