@@ -19,6 +19,7 @@ Users will also be able to pick from a section and it will randomly select a rec
 * A user can search their recipes (submit)
 
 #### Step 4: Come up with an MVP 
+* Home Page 
 * Form to create recipes (submit) 
 * List out recipes (DOMContentLoaded)
 * User can delete their recipe (click)
@@ -27,14 +28,17 @@ Users will also be able to pick from a section and it will randomly select a rec
 * A user can edit their recipe (Submit)
 * A user can search their recipes(submit)
 * A user can like a recipe (click)
-* A user can comment on a recipe
+* A user can comment on a recipe (submit, post)
 
 
 #### API Data I'll use and how I'll use it
+* Use the recipes/auto-complete endpoit to get a list of recipes that match the selected search term
+* Use the recipes/list endpoint to get a list of recipes a user has submitted
 
-
-#### Challenegs I expect to face
-*
-*
+#### Challenges I expect to face
+* Using adequate technical vocabulary
+* Getting stuck debugging
 
 ## How I am meeting the requirements of the project
+*  
+* 
