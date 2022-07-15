@@ -4,10 +4,82 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <!-- Compiled and minified CSS -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+   <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script> 
+   <!-- Compiled and minified JavaScrip --> 
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+   
     <title>Let's Bake!</title>
 </head>
 <body>
-    <h1>Hello World</h1>
+
+    </div>
+
+    <nav class="#827717 lime darken-4">
+        <div class="nav-wrapper container">
+          <a href="#" class="brand-logo">
+          <a href="#">Let's Bake!</a>
+          <ul id="nav-mobile" class="right hide-on-med-and-down">
+            <li><a href="#" id="home-link">Home</a></li>
+            <li><a href="#" id="diet">Diet</a></li>
+            <li><a href="#" id="country">Country</a></li>
+            <li><a href="#" id="tips-tricks">Tips & Tricks</a></li>
+          </ul>
+        </div>
+      </nav>
+     
+    </div class= "container">
+    <!-- Main contains all of our HTML. When clicking on links, it will be displaying in "main" div -->
+    <div id="main"></div>
+
+      <form action = "#" method = "post" class="container">
+        <div>
+           <label for="recipe title"> Recipe Title</label>
+           <input name="recipe title" id="recipe title" placeholder="Give your recipe a short yet descriptive name.">
+        </div>
+
+        <div>
+            <label for="description"> Describe your recipe </label>
+            <input type="text" name="description" id="description" placeholder="What's there to love about this recipe? Why is it special to you?" >
+        </div>
+        
+       <div>
+           <label for="diet"> Choose Diet: </label>
+
+           <select name="diet" id="diet">
+               <option value="normal" id="normal">Normal</option>
+               <option value="keto" id="keto">Keto</option>
+               <option value="vegan" id="vegan">Vegan</option>
+               <option value="sugar-free"id="sugar-free">Sugar Free</option>
+             </select>
+       </div>
+
+        <div>
+            <label for="ingredients"> Ingredients </label>
+            <input type="text" name="ingredients" id="ingredients" placeholder="Add each ingredient on its own line with an enter or return.">
+        </div>
+
+        <label for="instructions"> Instructions </label>
+        <input type="text" name=" Instructions" id="instructions" placeholder="Step by step, tell us how we can make it.">
+
+
+       <p> NOTE: Photos may be used in print publications or on the website. Please submit a high resolution jpg image at 300dpi. Uploaded files are limited to a max file size of 15 mb. 
+       </p>
+
+       <label class="checkbox" for="myCheckboxId"> 
+           <input class="checkbox__input" type="checkbox"id="terms-services">
+           <div class="checkbox__box"></div>
+           I agree to the above and confirm this recipe is original to me
+       </label>
+   
+      <div>
+       <button type="submit"> Submit </button>
+     </div>
+
+   </form>
+          
     <script src="javascripts/index.js"></script>
 </body>
 </html>
