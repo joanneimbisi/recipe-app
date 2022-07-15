@@ -1,59 +1,40 @@
 /** Globals **/
-let desserts = [];
+let desserts = [
+	{name: "Cheesecake",
+	description: "a bunch of description text",
+}
+];
 
 /** NODE Getters */
 
 
 const mainDiv = document.getElementById("main");
 
+const form = document.getElementById('formData')
+
 const homeLink = document.getElementById("home-link");
 
+const recipesLink = document.getElementById("recipes");
 
-/** Templates (reusable code ) **/ 
+const videosLink = document.getElementById("videos");
 
-// const dessertListTemplate = () => {
-// 	return `
-// 	<h2> Normal Desserts</h2>
-//       <table class="container">
-//         <thead>
-//           <tr>
-//               <th>Name</th>
-//               <th>Dessert Name</th>
-//               <th>Time</th>
-//           </tr>
-//         </thead>
+const tipsAndTricksLink = document.getElementById("tips-tricks")
 
-//         <tbody>
-//           <tr>
-//             <td>Alvin</td>
-//             <td>Macaroons</td>
-//             <td>1 hr 50 min</td>
-//           </tr>
-//           <tr>
-//             <td>Julie</td>
-//             <td>Tres Leches</td>
-//             <td>45 min</td>
-//           </tr>
-//           <tr>
-//             <td>Jonathan</td>
-//             <td>Classic Cheesecake</td>
-//             <td>7 hr 45 min</td>
-//           </tr>
-//         </tbody>
-//       </table>
-// 	  `
-	  
-	  
-// }
+const renderRecipesPage = (e) => {
+	e.preventDefault();
+/* iterate over meals and display them as cards*/
+ 
+}
 
 /** Renderers **/ 
 
-// const renderDessertListPage = () => {
-//     mainDiv.innerHTML = dessertListTemplate();
+const renderRecipes = () =>{
+	//  iterate over meals and display them as cards
+}
 	
 // }
 
-/** Events  **/
+/** Events Handlers  **/
 const loadHome = () => {
 	resetMainDiv();
 
@@ -68,22 +49,111 @@ p.innerText = 'Have an original dessert recipe you want to share? Submit the for
 
 mainDiv.appendChild(h1)
 mainDiv.appendChild(p)
-	// <h1 class='center-align'> Amazing recipes from around the world!</h1>
-	// <p class='center-align'> Have an original dessert recipe you wan to share? Submit the form below.</p>
+mainDiv.appendChild(form)
+
+}
+const loadRecipes = (e) =>{
+	e.preventDefault();
+	resetMainDiv();
+
+	 const h1 = document.createElement('h1')
+	 h1.innerText = 'Find a Recipe'
+
+	 renderRecipes()
+     mainDiv.appendChild(h1)
 }
 
+const loadVideos = (e) => {
+	e.preventDefault();
+	resetMainDiv();
+
+	const h1 = document.createElement('h1')
+    h1.innerText = 'Videos'
+	mainDiv.appendChild(h1)
+}
+
+const loadTipsAndTricks = e => {
+e.preventDefault();
+resetMainDiv();
+
+const h1 = document.createElement('h1')
+h1.innerText = "Tips & Tricks"
+// h1.className = "center-align";
+// h1.style.marginTop = "10px";
+// h1.style.paddingTop = "10px"
+mainDiv.appendChild(h1)
+}
+/** Events **/
 const attatchHomePageLinkEvent = () => { 
    homeLink.addEventListener('click', loadHome) 
     }
-// 	e.preventDefault();
-//     renderHomePage();
-// })
-// }
-//    const normalListEvent = () => { 
-//     normalListLink.addEventListener('click', (e) =>{
-		
 
-// 	 e.preventDefault();
+const attachRecipieLinkEvent = () => {
+	recipesLink.addEventListener('click', loadRecipes)
+    }
+const attachVideosLinkEvent = () => {
+	videosLink.addEventListener('click', loadVideos)
+}
+
+const attachTipsAndTricksLinkEvent = () => {
+	tipsAndTricksLink.addEventListener('click', loadTipsAndTricks)
+}
+
+// Helpers
+// const createCard = () => {
+//     const divCard = document.createElement('div');
+// 	const divImage = document.createElement('div')
+// 	const divCardContent = document.createElement('div')
+// 	const divCardAction = document.createElement('div')
+// 	const img = document.createElement('img');
+// 	const span = document.createElement('span')
+//     const pDescription = document.createElement('p')
+// 	const link1 = document.createElement('a')
+
+// 	divCard.className = "card";
+// 	divImage.className = "card-image"
+// 	divCardContent.className = "card-content"
+// 	divCardAction.className = "card-action"
+// 	span.className = "card-title"
+	
+
+// 	img.setAttribute("src", "https://www.tasteandtellblog.com/wp-content/uploads/2008/05/Tres-Leches-Cake-tasteandtellblog.com-1.jpg")
+// 	link1.setAttribute("href", "#")
+    
+	
+// 	span.innerText = "Tres Leches"
+// 	pDescription.innerText = "Tres leches literally means, “three milks”  and Tres Leches Cake is an ultra light sponge cake soaked in a sweet milk mixture. "
+// 	link1.innerText = "Order"
+	
+// 	divImage.appendChild(img)
+// 	divImage.appendChild(span)
+// 	divCardContent.appendChild(pDescription)
+// 	divCardAction.appendChild(link1)
+
+// 	divCard.appendChild(divImage)
+// 	divCard.appendChild(divCardContent)
+// 	divCard.appendChild(divCardAction)
+// 	<div class="row">
+//       <div class="col s12 m7">
+//        <div class="card">
+//          <div class="card-image">
+//            <img src="images/sample-1.jpg">
+//            <span class="card-title">Card Title</span>
+//          </div>
+//          <div class="card-content">
+//            <p>I am a very simple card. I am good at containing small bits of information.
+//           I am convenient because I require little markup to use effectively.</p>
+//          </div>
+//          <div class="card-action">
+//            <a href="#">This is a link</a>
+//          </div>
+//        </div>
+//      </div>
+//   </div>
+//      return divCard
+// }
+// const resetMain =
+
 // 	 renderDessertListPage();
 // })
 // }
@@ -103,23 +173,10 @@ const resetMainDiv = () => mainDiv.innerHTML = " ";
 /** WHEN THE DOM LOADS */
 
 document.addEventListener('DOMContentLoaded', () => {
-    // renderHomePage(); 
-	// homePageLinkEvent();
-	// normalListEvent();
+   
     loadHome();
 	attatchHomePageLinkEvent();
+	attachRecipieLinkEvent();
+	attachVideosLinkEvent();
+	attachTipsAndTricksLinkEvent();
 })
-
-// const options = {
-// 	method: 'GET',
-// 	headers: {
-// 		'X-RapidAPI-Key': '81b4cd0348mshdbf85c6563d25afp1a6a72jsn20d468ab62b3',
-// 		'X-RapidAPI-Host': 'tasty.p.rapidapi.com'
-// 	}
-// };
-
-// fetch('https://tasty.p.rapidapi.com/recipes/get-more-info?id=8138', options)
-// 	.then(response => response.json())
-// 	.then(response => console.log(response
-//         ))
-// 	.catch(err => console.error(err));
