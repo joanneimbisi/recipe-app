@@ -1,0 +1,19 @@
+.bg-image {
+    background-image: url("pexels-flora-westbrook-4191621.jpg");
+   background-size: cover;
+    background-repeat: no-repeat;
+    padding-top: 200px;
+    padding-bottom: 200px;
+}
+
+body { margin:0;
+    font-family: system-ui;
+}
+
+#main {
+    max-width: 960px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}

@@ -19,15 +19,16 @@ Users will also be able to pick from a section and it will randomly select a rec
 * A user can search their recipes (submit)
 
 #### Step 4: Come up with an MVP 
-* Home Page 
-* Form to create recipes (submit) 
-* List out recipes (DOMContentLoaded)
-* User can delete their recipe (click)
+* Home Page XX
+* Form to create recipes (submit) XX
+* List out desserts you can bake in each diet (video wit) (DOMContentLoaded)
+(Name, description, and prep time)
 
 #### Step 5: Listing Out your stretch goals (JSON)
 * A user can edit their recipe (Submit)
 * A user can search their recipes(submit)
 * A user can like a recipe (click)
+* Tips & Tricks (click)
 * A user can comment on a recipe (submit, post)
 
 
@@ -38,7 +39,3 @@ Users will also be able to pick from a section and it will randomly select a rec
 #### Challenges I expect to face
 * Using adequate technical vocabulary
 * Getting stuck debugging
-
-## How I am meeting the requirements of the project
-*  
-* 

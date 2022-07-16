@@ -1,9 +1,4 @@
 /** Globals **/
-let desserts = [
-	{name: "Cheesecake",
-	description: "a bunch of description text",
-}
-];
 
 /** NODE Getters */
 
@@ -45,7 +40,7 @@ h1.className = 'center-align';
 p.className = 'center-align';
 
 h1.innerText = "Amazing recipes from around the world!"
-p.innerText = 'Have an original dessert recipe you want to share? Submit the form below.'
+p.innerText = 'Have an original recipe you want to share? Submit the form below.'
 
 mainDiv.appendChild(h1)
 mainDiv.appendChild(p)
@@ -77,11 +72,30 @@ e.preventDefault();
 resetMainDiv();
 
 const h1 = document.createElement('h1')
+const h2 = document.createElement('h2')
+const h3 = document.createElement('h3')
+const h4 = document.createElement('h4')
+const para1 = document.createElement('p')
+const para2 = document.createElement('p')
+const para3 = document.createElement('p')
+
 h1.innerText = "Tips & Tricks"
-// h1.className = "center-align";
-// h1.style.marginTop = "10px";
-// h1.style.paddingTop = "10px"
+
+
+h2.innerText = "Let red meat sit before cutting into it."
+para1.innerText = "Even a well-done steak should never taste dry. To prevent a steak from losing its juicy interior, place it directly on top of aluminum foil after taking it off the stove or grill. Carefully wrap the steak in the foil and let it sit for approximately five minutes. This allows the juices to settle before you cut into the meat. The meat will continue to cook while it is in the foil so if you prefer medium steak, you should take it off when it is medium rare."
+
+h2.innerText = "Shut the stove off before eggs are done."
+
+para2.innerText = "The trick to great eggs is to not overcook them! Whether you scramble, fry, or poach, always turn off the stove a few minutes before the eggs look done—even when they seem a bit runny. The remainder of the heat will cook them to fluffy perfection."
 mainDiv.appendChild(h1)
+mainDiv.appendChild(h2)
+mainDiv.appendChild(para1)
+mainDiv.appendChild(para2)
+mainDiv.appendChild(h3)
+mainDiv.appendChild(para3)
+mainDiv.appendChild(h4)
+mainDiv.appendChild(para4)
 }
 /** Events **/
 const attatchHomePageLinkEvent = () => { 
@@ -154,7 +168,7 @@ const attachTipsAndTricksLinkEvent = () => {
 // }
 // const resetMain =
 
-// 	 renderDessertListPage();
+// 	 renderRecipeListPage();
 // })
 // }
 
