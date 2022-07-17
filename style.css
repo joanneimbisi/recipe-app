@@ -1,5 +1,5 @@
 body {
-    background-image: url("pexels-lukas-349609.jpg");
+    background-image: url("pexels-victoria-emerson-8642022.jpg");
     background-repeat: no-repeat;
     padding-top: 200px;
     padding-bottom: 200px;
@@ -7,6 +7,7 @@ body {
     margin:0 ;
     padding: 0;
     box-sizing: border-box;    
+    background-position: center;
 }
 
 #main {
