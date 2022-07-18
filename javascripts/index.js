@@ -17,17 +17,17 @@ const tipsAndTricksLink = document.getElementById("tips-tricks")
 
 const renderRecipesPage = (e) => {
 	e.preventDefault();
-/* iterate over meals and display them as cards*/
- 
+
+	resetMainDiv();
 }
 
 /** Renderers **/ 
 
 const renderRecipes = () =>{
-	//  iterate over meals and display them as cards
+//  Iterate over meals and display them as cards
 }
 	
-// }
+
 
 /** Events Handlers  **/
 const loadHome = () => {
@@ -36,10 +36,10 @@ const loadHome = () => {
 const h1 = document.createElement('h1')
 const p = document.createElement('p')
 
-h1.className = 'center-align';
-p.className = 'center-align';
+h1.className = 'overlay1';
+p.className = 'overlay2';
 
-h1.innerText = "Amazing recipes from around the world!"
+h1.innerText = "AMAZING RECIPES FROM AROUND THE WORLD"
 p.innerText = 'Have an original recipe you want to share? Submit the form below.'
 
 mainDiv.appendChild(h1)
@@ -97,7 +97,7 @@ mainDiv.appendChild(para3)
 mainDiv.appendChild(h4)
 mainDiv.appendChild(para4)
 }
-/** Events **/
+/** Event Listeners **/
 const attatchHomePageLinkEvent = () => { 
    homeLink.addEventListener('click', loadHome) 
     }
@@ -113,72 +113,80 @@ const attachTipsAndTricksLinkEvent = () => {
 	tipsAndTricksLink.addEventListener('click', loadTipsAndTricks)
 }
 
-// Helpers
+
+
+// // Helpers
 // const createCard = () => {
-//     const divCard = document.createElement('div');
-// 	const divImage = document.createElement('div')
-// 	const divCardContent = document.createElement('div')
-// 	const divCardAction = document.createElement('div')
-// 	const img = document.createElement('img');
-// 	const span = document.createElement('span')
-//     const pDescription = document.createElement('p')
-// 	const link1 = document.createElement('a')
 
-// 	divCard.className = "card";
-// 	divImage.className = "card-image"
-// 	divCardContent.className = "card-content"
-// 	divCardAction.className = "card-action"
-// 	span.className = "card-title"
-	
+// const divCard = document.createElement('div');
+// const divCardImage = document.createElement('div');
+// const divCardText = document.createElement('div');
+// const span = document.createElement('span');
+// const h2 = document.createElement('h2');
+// const pDescrition = document.createElement('p');
+// // card content
+// const divCardStats = document.createElement('div');
+// const divStat = document.createElement('div');
+// const divCardValue = document.createElement('div')
+// const divCardType = document.createElement('div')
+// const divStatBorder = document.createElement('div')
 
-// 	img.setAttribute("src", "https://www.tasteandtellblog.com/wp-content/uploads/2008/05/Tres-Leches-Cake-tasteandtellblog.com-1.jpg")
-// 	link1.setAttribute("href", "#")
-    
-	
-// 	span.innerText = "Tres Leches"
-// 	pDescription.innerText = "Tres leches literally means, “three milks”  and Tres Leches Cake is an ultra light sponge cake soaked in a sweet milk mixture. "
-// 	link1.innerText = "Order"
-	
-// 	divImage.appendChild(img)
-// 	divImage.appendChild(span)
-// 	divCardContent.appendChild(pDescription)
-// 	divCardAction.appendChild(link1)
 
-// 	divCard.appendChild(divImage)
-// 	divCard.appendChild(divCardContent)
-// 	divCard.appendChild(divCardAction)
-// 	<div class="row">
-//       <div class="col s12 m7">
-//        <div class="card">
-//          <div class="card-image">
-//            <img src="images/sample-1.jpg">
-//            <span class="card-title">Card Title</span>
-//          </div>
-//          <div class="card-content">
-//            <p>I am a very simple card. I am good at containing small bits of information.
-//           I am convenient because I require little markup to use effectively.</p>
-//          </div>
-//          <div class="card-action">
-//            <a href="#">This is a link</a>
-//          </div>
-//        </div>
-//      </div>
-//   </div>
-//      return divCard
+// divCard.className = "card";
+// divCardImage.className = "card-image";
+// divCardText.className = "card-text";
+// span.className = "prep-time";
+// span.innerText = "prep-time";
+// h2.innerText = "FOOD NAME";
+// pDescrition.innerText = "FOOD DESCRIPTION";
+// // card content
+// divCardStats.className= "card-stats";
+// divStat.className = "stat";
+// divCardValue.className = "value";
+// divCardType.className = " type";
+// divStatBorder.className = "stat-border";
+
+// divCard.appendChild(divCardImage);
+// divCard.appendChild(divCardText);
+// divCard.appendChild(span);
+// divCard.appendChild(h2);
+// divCard.appendChild(pDescrition);
+// //  card content
+// divCardStats.appendChild(divStat);
+// divCardStats.appendChild(divCardValue);
+// divCardStats.appendChild(divCardType);
+
+// divStatBorder.appendChild(divCardValue);
+// divStatBorder.appendChild(divCardType);
+
+// divStat.appendChild(divCardValue);
+// divStat.appendChild(divCardType);
+
+
+//  <div class="card">
+//    <div class="card-image"></div>
+//    <div class="card-text"> 
+//    <span class="prep-time">prep-time</span>
+//    <h2>FOOD NAME</h2>
+//    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Accusamus repellendus nostrum facilis quaerat ex corrupti amet nisi molestiae iste illo quos, quas a eveniet rem, doloribus impedit laborum perferendis fugit.</p>
+//    </div>
+//    <div class="card-stats">
+//         <div class="stat">
+// 			<div class="value">440</div>
+// 			<div class="type">read</div>
+// 		</div>
+//         <div class="stat-border">
+// 			<div class="value">5123</div>
+// 			<div class="type">views</div>
+// 		</div>
+//         <div class="stat">
+// 			<div class="value">32</div>
+// 			<div class="type">comments</div>
+// 		</div>
+//       </div>  
+//     </div>
+//  return divCard
 // }
-// const resetMain =
-
-// 	 renderRecipeListPage();
-// })
-// }
-
-/* First of all you want to explain to yourself the full feature
-* Break down feature with (3 question rule):
-* At what time can I do this event?(DOM Content Loaded)
-* What's going to trigger this event? (click)
-* Effect (display)
-**/
-
 /** MISC**/
 
 const resetMainDiv = () => mainDiv.innerHTML = " ";
