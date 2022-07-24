@@ -4,7 +4,7 @@
 ### Step 2: Working on the Overview
 * Brainstorm about what kind of features you'd like to have. Write them down as you think of it. Ex:
 
-A user can fill out a FORM where they can upload their recipe. They have 4 categories to choose from: low carb, diabetic, vegan, and normal. User can edit thier recipes and delete them if necessary.
+A user can fill out a FORM where they can upload their recipe. 
 
 Users will also be able to pick from a section and it will randomly select a recipe for you. They can also like and comment on recipes. A search bar
 
