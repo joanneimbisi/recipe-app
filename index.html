@@ -6,76 +6,61 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Let's Bake!</title>
   <link rel="stylesheet" href="style.css">
+
+ <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap" rel="stylesheet">
 </head>
 <body>
-  <div class="header">
-   </div>
-   <div class="bg-image"></div>
-          <a href="#">Let's Bake!</a>
-          <ul id="nav-mobile" class="">
-            <li><a href="#" id="home-link">Home</a></li>
-            <li><a href="#" id="recipes">Recipes</a></li>
-            <li><a href="#" id="videos">Videos</a></li>
-            <li><a href="#" id="tips-tricks">Tips & Tricks</a></li>
+  
+  <div class="container">
+      <div class="navbar">
+        <nav class="nav">
+          <ul>
+            <li><a href="" id="home-link">Home</a></li>
+            <li><a href="" id="recipes">Recipes</a></li>
           </ul>
-        </div>
-      </nav>
+        </nav>
+     </div>   
+  </div>
      
-    </div class= "container">
     <!-- Where we push templates. When clicking on links, it will be displaying in "main" div -->
-    <div class="container" id="main"></div>
-   
-
+    <div class="container" id="main">
       <form action = "#" method = "post" class="container" id="formData">
-        <div>
-           <label for="recipe title"> Recipe Title</label>
-           <input name="recipe title" id="recipe title" placeholder="Give your recipe a short yet descriptive name.">
+        <fieldset>
+          <legend> Your Recipe</legend>
+            <div>
+             <label for="recipe title" class="texts"> Recipe Title</label>
+             <input name="recipe title" class="textbox" placeholder="Give your recipe a short yet descriptive name.">
+           </div>
+           <div>
+             <label for="description" class="texts"> Describe your recipe </label>
+             <input type="text" name="description" class= "textbox"  placeholder="What's there to love about this recipe? Why is it special to you?" >
+           </div>
+           <div>
+            <label for="ingredients" class="texts"> Ingredients </label>
+            <input type="text" name="ingredients" class="textbox" placeholder="Add each ingredient on its own line with an enter or return.">
+           </div>
+            <label for="instructions" class="texts"> Instructions </label>
+            <input type="text" name=" Instructions" class="textbox" placeholder="Step by step, tell us how we can make it.">
+           <div action="/action_page.php">
+            <input type="file" id="myFile" class="note" name="filename">
+           </div>  
+         <p class="note"> NOTE: Photos may be used in print publications or on the website. Please submit a high resolution jpg image at 300dpi. Uploaded files are limited to a max file size of 15 mb. 
+          </p>
+        <p>
+           <label>
+            <input type="checkbox" />
+            <span class="note" >I agree to the above and confirm this recipe is original to me</span>
+           </label>
+        </p>
+         <div>
+         <button type="submit" id="submit"> Submit </button>
+         </div>
+      </form>
+    </fieldset>   
         </div>
-
-        <div>
-            <label for="description"> Describe your recipe </label>
-            <input type="text" name="description" id="description" placeholder="What's there to love about this recipe? Why is it special to you?" >
-        </div>
-        
-       <div>
-
-           <select name="diet" id="diet">
-               <option value="normal" id="normal">Normal</option>
-               <option value="keto" id="keto">Keto</option>
-               <option value="vegan" id="vegan">Vegan</option>
-               <option value="sugar-free"id="sugar-free">Sugar Free</option>
-             </select>
-       </div>
-
-        <div>
-            <label for="ingredients"> Ingredients </label>
-            <input type="text" name="ingredients" id="ingredients" placeholder="Add each ingredient on its own line with an enter or return.">
-        </div>
-
-        <label for="instructions"> Instructions </label>
-        <input type="text" name=" Instructions" id="instructions" placeholder="Step by step, tell us how we can make it.">
-
-        <div action="/action_page.php">
-            <input type="file" id="myFile" name="filename">
-        </div>  
-
-       <p> NOTE: Photos may be used in print publications or on the website. Please submit a high resolution jpg image at 300dpi. Uploaded files are limited to a max file size of 15 mb. 
-       </p>
-
-       <p>
-        <label>
-          <input type="checkbox" />
-          <span>I agree to the above and confirm this recipe is original to me</span>
-        </label>
-      </p>
-        
-   
-      <div>
-       <button type="submit"> Submit </button>
-     </div>
-
-   </form>
-          
-    <script src="javascripts/index.js"></script>
+  <script type='text/javascript' src='config.js'></script>
+  <script src="javascripts/index.js"></script>
 </body>
 </html>
