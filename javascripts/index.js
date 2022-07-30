@@ -1,7 +1,4 @@
-/** Globals **/
-
 /** NODE Getters */
-
 
 const mainDiv = () => document.getElementById("main");
 
@@ -11,44 +8,62 @@ const homeLink = document.getElementById("home-link");
 
 const recipesLink = document.getElementById("recipes");
 
+const formData = document.getElementById('formData');
+
+const fieldSet = document.getElementById('fieldset')
+
 /** Events Handlers  **/
-
-const renderRecipesPage = (e) => {
-	e.preventDefault();
-	resetMain();
-
-const h1 = document.createElement('h1')
-h1.innerText = 'Find a Recipe'
-
-mainDiv().appendChild(h1); 
-
 
 	 function fetchRecipes () {  
 		resetMain();
-		const options = {
-			method: 'GET',
-			headers: {
-				'X-RapidAPI-Key': config.API_Key,
-				'X-RapidAPI-Host': config.API_Host
-			}}
-		
-			fetch('https://tasty.p.rapidapi.com/recipes/list?from=0&size=8&tags=under_30_minutes', options)
+
+			fetch('http://localhost:3000/recipes')
 			.then(response => response.json())  
-			.then(data => data.results.forEach(recipe => createCard(recipe)))
+			.then(recipes => {recipes.forEach(recipe => createCard(recipe))})
 			.catch(err => console.error(err));
-			console.log("Hello World")
-		}; 
-		fetchRecipes();
-		
-	
-		
+
+		// fetchRecipes();	
+
+	//  Get data to render animals the DOM
+	function intitialize(){
+		// fetchRecipes();
+	} intitialize();
 	} 
-		
-	function createCard (recipe) {
-			console.log("Hello World")
+      
+
+		const renderRecipesPage = (e) => {
+			e.preventDefault();
 			resetMain();
 		
+		const h1 = document.createElement('h1')
+		h1.innerText = 'Find a Recipe'
 		
+		mainDiv().appendChild(h1); 
+		fetchRecipes();
+		renderRecipesPage();
+			
+		}; 
+	// recipesLink.forEach(recipe => {
+	// 	const col = renderRecipe(recipe)
+
+	// 	row.appendChild(col);
+	// })
+	// mainDiv().appendChild(row)
+
+	// const renderRecipe = recipe => {
+	// 	const col = document.createElement('div');
+	// 	col.className = 'col s12 l6'
+
+	// 	col.appendChild(createCard(recipe))
+
+	// 	return col;
+	// }
+		
+	function createCard (recipe) {
+		    
+			// resetMain();
+		// const row = document.createElement('row');
+		// const col = document.createElement('col')	
 		const divCard = document.createElement('div');
 		const divCardImage = document.createElement('div');
 		const img = document.createElement('img');
@@ -58,28 +73,25 @@ mainDiv().appendChild(h1);
 		const pDescrition = document.createElement('p');
 		
 		// card content
-		const divCardStats = document.createElement('div');
-		const divStat = document.createElement('div');
-		const divCardValue = document.createElement('div')
-		const divCardType = document.createElement('div')
-		const divStatBorder = document.createElement('div')
+		// const divCardStats = document.createElement('div');
+		// const divStat = document.createElement('div');
+		// const divCardValue = document.createElement('div')
+		// const divCardType = document.createElement('div')
+		// const divStatBorder = document.createElement('div')
 		
-		
+		// row.className = "row";
+		// col.className = "col"
 		divCard.className = "card";
 		divCardImage.className = "card-image";
-		img.src = `${recipe.thumbnail_url}`;
+		img.src = `${recipe.image}`;
 		divCardText.className = "card-text";
 		span.className = "prep-time";
 		span.innerText = `${recipe.prep_time_minutes} minutes`;
 		h2.innerText = `${recipe.name}`;
 		pDescrition.innerText = `${recipe.description}`;
-		// card content
-		// divCardStats.className= "card-stats";
-		// divStat.className = "stat";
-		// divCardValue.className = "value";
-		// divCardType.className = " type";
-		// divStatBorder.className = "stat-border";
-	
+      
+		// row.appendChild(col);
+		// divCard.appendChild(col);
 		divCard.appendChild(img);
 		divCard.appendChild(divCardText);
 		divCard.appendChild(span);
@@ -88,25 +100,12 @@ mainDiv().appendChild(h1);
 		divCardText.appendChild(h2)
 		divCardText.appendChild(span)
 		divCardText.appendChild(pDescrition)
-		//  card content
-		// divCardStats.appendChild(divStat);
-		// divCardStats.appendChild(divCardValue);
-		// divCardStats.appendChild(divCardType);
-		
-		// divStatBorder.appendChild(divCardValue);
-		// divStatBorder.appendChild(divCardType);
-		
-		// divStat.appendChild(divCardValue);
-		// divStat.appendChild(divCardType);
-
-		// divCard.appendChild(divCardStats)
-		// divCard.appendChild(divStatBorder)
 		
 		
 		console.log(divCard)
 		mainDiv().appendChild(divCard)
-		mainDiv().appendChild(recipes)
-		return divCard;
+		// mainDiv().appendChild(recipesLink)
+		// return divCard;
 	
 
 		}    
@@ -114,7 +113,7 @@ mainDiv().appendChild(h1);
 		const resetMain = () => { 
 			mainDiv().innerHTML = " ";
 		}
-	
+
 
 	/** Event Listeners **/
 	const attatchHomePageLinkEvent = () => { 
@@ -125,6 +124,17 @@ mainDiv().appendChild(h1);
 		 recipesLink.addEventListener('click', renderRecipesPage)
 		 }
 	 
+	 formData.addEventListener('submit', (e) => {
+		 e.preventDefault();
+
+		 console.log('Form has been submitted');
+	 })
+
+	 fieldSet.addEventListener('mouseover', overing);
+	 function overing(ev){
+		 ev.currentTarget.style.borderColor = 'orange'
+		 console.log('mouseover')
+	 }
 	 
 
 
