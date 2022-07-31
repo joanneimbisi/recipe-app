@@ -131,38 +131,35 @@ legend{
 
 /* Header */
 
-.navbar{
-     height: 50%;
-     display: flex;
-}
-nav {
-    text-align: center;
-    position: relative;
-    top: 2px;
-    left: 1010px;    
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: rgb(109, 105, 105);
 }
 
-nav ul li{
-    list-style: none;
-    display: inline-block;
-    margin-left: 12px;
-    
+li {
+  float: right;
+  top: 2px;
 }
 
-nav ul li a {
-    text-decoration: none;
-    color: #fff;
-    font-size: 13px;
-    position:relative ;
-    padding: 8px 16px;
-    left: 80px;
-    top: 2px;
-    float: right;
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+/* Change the link color to #111 (black) on hover */
+li a:hover {
+  background-color: rgb(65, 60, 60);
 }
 /* Card */
-body{
-width: 100vw;
-height: 100vh;
+/* .card {
+width: 21vw;
+height: 55vh;
 display: flex;
 flex-flow: row wrap;
 align-items: center;
@@ -172,14 +169,15 @@ margin: 0 auto;
 max-width: 1000px;
 grid-template-columns: repeat(auto-fill, minmax(225px, 1fr));
 display: grid; 
-gap: 20px;
+gap: 20px; 
 
-}
+} */
 
 .card {
     display: grid; 
     grid-template-columns: 300px; 
     grid-template-rows: 210px 210px 80px;
+    position: center;
     grid-template-areas: "image" "text" "stats"; 
     border-radius: 18px;
     background: white;
