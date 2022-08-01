@@ -41,7 +41,6 @@ const fieldSet = document.getElementById('fieldset')
 		mainDiv().appendChild(h1); 
 		fetchRecipes();
 		renderRecipesPage();
-			
 		}; 
 	// recipesLink.forEach(recipe => {
 	// 	const col = renderRecipe(recipe)
