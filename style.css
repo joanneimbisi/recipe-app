@@ -9,10 +9,6 @@
     box-sizing: border-box;     
     background-position: center;
     height: 100%;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
 } 
 
 #main {
@@ -44,7 +40,6 @@ label {
     display: block;
     margin-top: 1em;
 }
-
 .checks label {
     margin-top: 0;
 }
@@ -101,7 +96,7 @@ fieldset {
     height: 100%;
     font-family: 'Libre Baskerville', serif;
     font-size: 22px;
-    color: rgba(216, 206, 206, 0.87); ; 
+    color: rgba(255, 247, 247, 0.918); ; 
     display: flex;
     text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 }
@@ -139,12 +134,14 @@ ul {
   background-color: rgb(109, 105, 105);
 }
 
-li {
-  float: right;
+#main_title{
+  float: left;
   top: 2px;
 }
 
 li a {
+  float: right;
+  top: 2px;
   display: block;
   color: white;
   text-align: center;
@@ -152,16 +149,14 @@ li a {
   text-decoration: none;
 }
 
-/* Change the link color to #111 (black) on hover */
 li a:hover {
   background-color: rgb(65, 60, 60);
 }
 /* Card */
-/* .card {
+.card {
 width: 21vw;
-height: 55vh;
+height: 56vh;
 display: flex;
-flex-flow: row wrap;
 align-items: center;
 justify-content: center;
 
@@ -170,15 +165,14 @@ max-width: 1000px;
 grid-template-columns: repeat(auto-fill, minmax(225px, 1fr));
 display: grid; 
 gap: 20px; 
-
-} */
+} 
 
 .card {
     display: grid; 
     grid-template-columns: 300px; 
     grid-template-rows: 210px 210px 80px;
     position: center;
-    grid-template-areas: "image" "text" "stats"; 
+    grid-template-areas: "image" "text";
     border-radius: 18px;
     background: white;
     box-shadow: 5px 5px 15px rgba(0,0,0,0.9);
@@ -190,13 +184,9 @@ gap: 20px;
     width: 100%;
     height: 20w;
     object-fit: cover;
+    border-radius: 5px 5px 0 0;
   }
-  .card-image{
-    grid-area: image;
-    border-top-left-radius: 15px;
-    border-top-right-radius: 15px;
-    background-size: cover;
-  }
+  
   .card-text {
     grid-area: text;
     margin: 25px;
@@ -213,47 +203,6 @@ gap: 20px;
   .prep-time {
     color: rgb(255, 123, 0);
   }
-
-
-  /* .card-stats {
-    grid-area: stats; 
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr;
-  
-    border-bottom-left-radius: 15px;
-    border-bottom-right-radius: 15px;
-    background: rgb(206, 137, 73)
-  }
-  .card-stats .stat{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-
-    color: white;
-    padding:10px;
-  } */
-
-  /* .card-stats .type{
-      font-size: 11px;
-      font-weight: 300;
-      text-transform: uppercase;
-  }
-
-  .card-stats .value {
-      font-size: 22px;
-      font-weight: 500;
-  }
-
-  .card-stats .border{
-      border-left: 1px solid white;
-      border-right: 1px solid white;
-  }
-
-  .card-stats .value sup{
-      font-size: 12px;
-  } */
   .card:hover {
     transform: scale(1.15);
     box-shadow: 5px 5px 15px rgba(0,0,0,0.6);
@@ -263,3 +212,26 @@ gap: 20px;
     cursor: pointer;
     margin:30px;
   }
+
+  .cards {
+ 
+    display: grid;
+     
+    grid-template-columns: repeat(3, 1fr);
+     
+    grid-auto-rows: auto;
+     
+    grid-gap: 1rem;
+     
+    }
+  
+     
+    .card {
+     
+    border: 2px solid #e7e7e7;
+     
+    border-radius: 4px;
+     
+    padding: .5rem;
+     
+    }
